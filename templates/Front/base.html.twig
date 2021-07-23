@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <title>L'ecume</title>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+       <a href="{{ path('home') }}">
+        <img src="{{ asset("media/211ce356d19043b5986de1ac984e04ad.png") }}" alt="logo">
+       </a>
+    </div>
+    <div>
+        <ul class="links">
+            <li><a href="{{ path('home') }}">accueil</a></li>
+            <li><a href="{{ path('carte' , {'Type': 'entree'}) }}">la carte</a></li>
+            <li><a href="{{ path('gallerie') }}">gallerie</a></li>
+            <li><a href="{{ path('contact') }}">contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+
+</nav>
+<main>
+{% block content %}
+
+
+{% endblock content %}
+</main>
+<footer>
+    <div class="logo-footer">
+        <img src="{{ asset("media/211ce356d19043b5986de1ac984e04ad.png") }}" alt="logo">
+    </div>
+    <div class="flex footer  ">
+
+        <div class=" ">
+            <h3>contact us</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i>25 boulevard des trémières 17570 La Palmyre</li>
+                <li><i class="fas fa-phone-alt"></i>05 46 22 41 42</li>
+                <li><i class="fas fa-envelope"></i>l'ecume@gmail.com</li>
+                <li><i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i></li>
+            </ul>
+        </div>
+        <div class=" ">
+            <h3>Hours</h3>
+            <ul>
+                <li>tous les jours de la semaine</li>
+                <li>12 H à 15H </li>
+                <li>19H à 22H</li>
+            </ul>
+        </div>
+        <div class="">
+            <h3>mention legales</h3>
+            <ul>
+                <li>Lorem ipsum </li>
+                <li>Lorem ipsum </li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+
+{% block script %}
+
+{% endblock script %}
+<script src="{{ asset('app.js') }}"></script>
+</body>
+</html>

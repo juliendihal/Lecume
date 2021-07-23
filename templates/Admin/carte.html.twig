@@ -1,0 +1,30 @@
+{% extends 'Admin/base.html.twig' %}
+
+{% block content %}
+    <div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">nom</th>
+            <th scope="col">description</th>
+            <th scope="col">prix</th>
+            <th scope="col">type</th>
+            <th scope="col">subtype</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for plat in plats %}
+        <tr>
+            <th scope="row">{{ plat.id }}</th>
+            <td>{{ plat.name }}</td>
+            <td>{{ plat.description }}</td>
+            <td>{{ plat.Prix }}</td>
+            <td>{{ plat.Type }}</td>
+            <td>{{plat.subtype}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

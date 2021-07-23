@@ -1,0 +1,44 @@
+{% extends 'Front/base.html.twig' %}
+
+{% block content %}
+    <div class="banner banner2">
+        <h2>Notre carte </h2>
+    </div>
+    <div class="card">
+        <div class="flex2 flexbtn">
+            <a href="{{ path('carte' , {Type: "entree"}) }}"><button class="btnchoice" >entrée</button></a>
+            <a href="{{ path('carte' , {Type: "plat"}) }}"><button class="btnchoice" >plats</button></a>
+            <a href="{{ path('carte' , {Type: "dessert"}) }}"><button class="btnchoice" >dessert</button></a>
+            <a href="{{ path('carte' , {Type: "boisson"}) }}"><button class="btnchoice" >boisson</button></a>
+        </div>
+
+        <div class="carte">
+            {% set subTypeName = '' %}
+
+            {% for plat in plats %}
+
+                {% if plat.subtype != subTypeName  %}
+            <div class="block">
+                    <h3>{{ plat.subtype }}</h3>
+                     <hr class="carte-hr">
+                </div>
+            <div class="flex flex-carte ">
+                    {% set subTypeName = plat.subtype %}
+                {% endif %}
+                <div class="entree">
+                    <div class="flex2">
+                        <p class="intitulé">{{ plat.name }}</p>
+                        <p>{{ plat.Prix}} $</p>
+                    </div>
+                    <p class="description">{{ plat.description }}</p>
+                </div>
+
+            {% endfor %}
+            </div>
+
+
+
+
+        </div>
+
+{% endblock content  %}

@@ -1,0 +1,19 @@
+{% extends 'Admin/base.html.twig' %}
+
+{% block content %}
+    {{ form_start(galerieForm) }}
+    <div class="form">
+
+    <div>
+        {{ form_label(galerieForm.image , 'Image', {'label_attr': {'class': 'form-label'}}) }}
+        <br>
+        {{ form_widget(galerieForm.image, {'attr' : {'class': ' form-control'}}) }}
+    </div>
+        <div>
+            {{ form_widget(galerieForm.submit  , {'attr' : {'class': ' btn btn-primary mt-2'}, 'label': 'enregistrer'}) }}
+        </div>
+
+    </div>
+    {{ form_end(galerieForm) }}
+
+{% endblock %}

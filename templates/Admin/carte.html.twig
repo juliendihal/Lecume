@@ -1,0 +1,32 @@
+{% extends 'Admin/base.html.twig' %}
+
+{% block content %}
+    <div class="table-responsive">
+        <h3 class="m-3">La Carte</h3>
+    <table class="table">
+
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">nom</th>
+            <th scope="col">description</th>
+            <th scope="col">prix</th>
+            <th scope="col">type</th>
+            <th scope="col">subtype</th>
+            <th colspan="2"><a href="{{ path('carte_insert') }}"><i class="fas fa-plus"></i></a></th>
+        </tr>
+
+        {% for plat in plats %}
+        <tr>
+            <th scope="row">{{ plat.id }}</th>
+            <td>{{ plat.name }}</td>
+            <td>{{ plat.description }}</td>
+            <td>{{ plat.Prix }}</td>
+            <td>{{ plat.type.name }}</td>
+            <td>{{plat.subtype.name}}</td>
+            <td><a href="{{ path('carte_update', {id : plat.id}) }}"><i class="fas fa-edit"></i></a></td>
+            <td><a href="{{ path('carte_delete' , {id : plat.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

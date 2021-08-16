@@ -1,0 +1,94 @@
+{% extends 'Admin/base.html.twig' %}
+
+{% block content %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+    </div>
+    <div class="table-responsive">
+        <h3>La Carte</h3>
+        <table class="table">
+
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nom</th>
+                <th scope="col">description</th>
+                <th scope="col">prix</th>
+                <th scope="col">type</th>
+                <th scope="col">subtype</th>
+                <th colspan="2"><a href="{{ path('carte_insert') }}"><i class="fas fa-plus"></i></a></th>
+            </tr>
+
+            {% for plat in plats %}
+                <tr>
+                    <th scope="row">{{ plat.id }}</th>
+                    <td>{{ plat.name }}</td>
+                    <td>{{ plat.description }}</td>
+                    <td>{{ plat.Prix }}</td>
+                    <td>{{ plat.type.name }}</td>
+                    <td>{{plat.subtype.name}}</td>
+                    <td><a href="{{ path('carte_update', {id : plat.id}) }}"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="{{ path('carte_delete' , {id : plat.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+    <div class="table-responsive">
+        <h3>La Galerie</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">image</th>
+                <th scope="col">description</th>
+                <th colspan="2"><a href="{{ path('galerie_insert') }}"><i class="fas fa-plus"></i></a></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for image in images %}
+                <tr>
+                    <th scope="row">{{ image.id }}</th>
+                    <td>{{ image.image }}</td>
+                    <td>description</td>
+                    <td><a href="{{ path('galerie_update', {id : image.id}) }}"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="{{ path('galerie_delete' , {id : image.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="table-responsive">
+        <h3>Utilisateurs</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nom</th>
+                <th scope="col">prenom</th>
+                <th scope="col">mail</th>
+                <th scope="col">role</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <th scope="row">{{ user.id }}</th>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.email }}</td>
+                    {% if user.roles[0] == "ROLE_ADMIN" %}
+                        <td>Admin</td>
+                    {% endif %}
+                    {% if user.roles[0] == "ROLE_USER" %}
+                        <td>utilisateur</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

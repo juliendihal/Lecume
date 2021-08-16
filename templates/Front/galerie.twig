@@ -1,0 +1,10 @@
+{% extends 'Front/base.html.twig' %}
+{% block content %}
+<div class="gallerie">
+    <div class="flex flex-gallerie">
+        {% for image in images %}
+            <img src="{{ asset('upload/'~ image.image) }}" alt="">
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

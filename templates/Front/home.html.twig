@@ -1,0 +1,49 @@
+{% extends 'Front/base.html.twig' %}
+
+{% block content %}
+
+    <div class="banner"></div>
+    <div class="inspired">
+        <p>Lorem Ipsum est simplement un faux texte de l'industrie de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500, quand un imprimeur inconnu a pris une galère de caractères et l'a brouillée pour en faire un livre de spécimens. Il a survécu non seulement cinq siècles, mais aussi le saut dans la composition électronique, demeurant essentiellement inchangé. </p>
+    </div>
+
+    <div class="flex card-landing reverse">
+        <div class="about-text propos">
+            <h2>A propos de nous</h2>
+            <p>Lorem Ipsum est simplement un faux texte de l'industrie de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500, quand un imprimeur inconnu a pris une galère de caractères et l'a brouillée pour en faire un livre de spécimens. Il a survécu non seulement cinq siècles, mais aussi le saut dans la composition électronique, demeurant essentiellement inchangé. </p>
+                <a class="btn" href="#">en savoir plus ... </a>
+        </div>
+        <div class="about-img">
+            <img src="{{ asset("media/img1main.jpg") }}" alt="cuisinier">
+        </div>
+    </div>
+
+    <div class="flex card-landing ">
+        <div class="about-img">
+            <img src="{{ asset("media/img2main.jpg") }}" alt="photo burger">
+        </div>
+        <div class="about-text menu">
+            <h2>découvrez notre carte</h2>
+            <p>Lorem Ipsum est simplement un faux texte de l'industrie de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500, quand un imprimeur inconnu a pris une galère de caractères et l'a brouillée pour en faire un livre de spécimens. Il a survécu non seulement cinq siècles, mais aussi le saut dans la composition électronique, demeurant essentiellement inchangé. </p>
+               <a class="btn" href="{{ path('carte' , {id: 1}) }}">decouvrir la carte</a>
+        </div>
+    </div>
+
+    <div class="flex card-landing reverse">
+        <div class="about-text propos">
+            <h2>gallerie photo</h2>
+            <p>
+                Lorem Ipsum est simplement un faux texte de l'industrie de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500, quand un imprimeur inconnu a pris une galère de caractères et l'a brouillée pour en faire un livre de spécimens. Il a survécu non seulement cinq siècles, mais aussi le saut dans la composition électronique, demeurant essentiellement inchangé. </p>
+
+            <a class="btn" href="{{ path('galerie') }}">decouvrir la gallerie</a>
+        </div>
+        <div class="about-img ">
+
+            <img src=" {{ asset("media/img3main.jpg") }}" alt="cuisinier">
+
+
+        </div>
+    </div>
+
+
+{% endblock content %}

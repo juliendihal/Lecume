@@ -1,0 +1,30 @@
+{% extends 'Admin/base.html.twig' %}
+
+
+{% block content %}
+    {{ form_start(carteForm) }}
+        <div class="form col-10 m-auto p-5">
+            <div>
+                {{ form_label(carteForm.name , 'titre', {'label_attr': {'class': 'form-label'}}) }}{{ form_widget(carteForm.name, {'attr' : {'class': ' form-control '}}) }}
+                <div class="text-error">
+                    {{ form_errors(carteForm.name ,{'attr':  {'class': 'error'}}) }}
+                </div>
+            </div>
+            <div>
+                {{ form_label(carteForm.description , 'description', {'label_attr': {'class': 'form-label'}}) }}{{ form_widget(carteForm.description , {'attr' : {'class': ' form-control'}}) }}
+            </div>
+            <div>
+                {{ form_label(carteForm.Prix , 'prix', {'label_attr': {'class': 'form-label'}}) }}{{ form_widget(carteForm.Prix , {'attr' : {'class': ' form-control'}}) }}
+            </div>
+            <div>
+                {{ form_label(carteForm.type , 'type', {'label_attr': {'class': 'form-label'}}) }}{{ form_widget(carteForm.type , {'attr' : {'class': ' form-control'}}) }}
+            </div>
+            <div>
+                {{ form_label(carteForm.subtype , 'prix', {'label_attr': {'class': 'form-label'}}) }}{{ form_widget(carteForm.subtype , {'attr' : {'class': ' form-control'}}) }}
+            </div>
+            <div>
+                {{ form_widget(carteForm.submit  , {'attr' : {'class': ' btn btn-primary mt-2'}, 'label': 'enregistrer'}) }}
+            </div>
+        </div>
+    {{ form_end(carteForm) }}
+{% endblock %}

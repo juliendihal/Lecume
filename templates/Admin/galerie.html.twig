@@ -1,0 +1,29 @@
+{% extends 'Admin/base.html.twig' %}
+
+{% block content %}
+    <div class="table-responsive">
+        <h3 class="m-3">La Galerie</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">image</th>
+                <th scope="col">description</th>
+                <th colspan="2"><a href="{{ path('galerie_insert') }}"><i class="fas fa-plus"></i></a></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for image in images %}
+                <tr>
+                    <th scope="row">{{ image.id }}</th>
+                    <td>{{ image.image }}</td>
+                    <td>description</td>
+                    <td><a href="{{ path('galerie_update', {id : image.id}) }}"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="{{ path('galerie_delete' , {id : image.id}) }}"><i class="fas fa-trash-alt"></i></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

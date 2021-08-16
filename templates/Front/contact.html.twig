@@ -1,0 +1,22 @@
+{% extends 'Front/base.html.twig' %}
+
+{% block script %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5SbKyHJaaJmvosMmaH50tSnwMvm2thGY&callback=initMap&libraries=&v=weekly"async></script>
+{% endblock script %}
+
+{% block content %}
+<div class="banner2 banner"></div>
+<div class="about-text contact">
+    <h2>contactez nous</h2>
+    <ul>
+        <li><i class="fas fa-map-marker-alt"></i>25 boulevard des trémières 17570 La Palmyre</li>
+        <li><i class="fas fa-phone-alt"></i>05 46 22 41 42</li>
+        <li><i class="fas fa-envelope"></i>l'ecume@gmail.com</li>
+        <li>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </li>
+    </ul>
+</div>
+<div id="map"></div>
+{% endblock %}

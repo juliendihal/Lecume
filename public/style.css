@@ -1,0 +1,624 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.sidebar-sticky{
+    height: calc(100vh - 48px) !important;
+}
+
+.hr-form{
+    border: solid 1px darkgrey;
+    height: 30px;
+
+}
+
+.form-i{
+    position: relative;
+}
+
+.form-i i{
+    position: absolute;
+    top:44px;
+    right:10px;
+    color:red;
+    visibility: hidden;
+}
+
+.error-i{
+    visibility: visible;
+}
+
+.error {
+    color:red;
+    display: block;
+}
+
+
+ small{
+     display: none;
+ }
+
+
+.bg{
+    background-color: #fffded;
+}
+
+.flex{
+    display:flex;
+}
+
+.block{
+    display: block;
+    width: 100%;
+}
+
+
+
+.table{
+    margin:20px 0px !important;
+}
+
+
+
+p{
+    color:#0c594d;
+    font-family: open;
+}
+
+
+
+.toggle .line1{
+    transform:rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform:rotate(45deg) translate(-5px,-6px);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("fonts/Poppins/Poppins-Black.ttf") format("woff2"),
+    url("fonts/Poppins/Poppins-Black.ttf") format("woff");
+}
+@font-face {
+    font-family: "open";
+    src: url("fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf") format("woff2"),
+    url("fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf") format("woff");
+}
+/*---------------------------------Nav---------------------------------*/
+
+nav{
+    background-color:#fffded;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 40px;
+    text-transform:uppercase;
+    width: 100%;
+    z-index: 4;
+}
+
+.logo img{
+    width: 30%;
+}
+
+nav a{
+    color: #0c594d;
+    font-family: "poppins";
+}
+
+nav a:hover{
+    color: #ee8877;
+}
+.links{
+    display:flex;
+}
+
+li{
+    list-style-type: none;
+    margin:20px;
+
+}
+
+.burger div{
+    border: 2px solid  #0c594d;
+    width: 30px;
+    margin:5px;
+    display: none;
+}
+
+/*---------------------------------Nav---------------------------------*/
+
+/*---------------------------------Banniere img---------------------------------*/
+
+.banner{
+    background-image: url(media/BannierrLE.png) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 600px;
+}
+
+.banner2{
+    height: 400px;
+}
+
+/*---------------------------------Banniere img---------------------------------*/
+
+/*---------------------------------section1 paragraphe---------------------------------*/
+.inspired{
+    width: 100%;
+    height:40% ;
+    background-color: #fffded;
+}
+.inspired p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding:90px 0px
+}
+/*---------------------------------section1 paragraphe---------------------------------*/
+
+/*---------------------------------main---------------------------------*/
+
+.about-img{
+    width: 50%;
+    height:479px ;
+}
+
+.about-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-text{
+    width: 50%;
+    text-align: center;
+    padding:0 50px;
+}
+
+.menu{
+    background-color:#fede9f ;
+}
+.propos {
+    background-color: #d9e5db;
+}
+
+
+
+.about-text h2{
+    margin: 15% 0px 30px;
+    text-transform: uppercase;
+    color:#0c594d;
+    font-family: "poppins";
+    letter-spacing: 1px;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: #0c594d;
+    color:white;
+    margin: 30px auto;
+    padding: 20px 40px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.btn:before , .btnchoice::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ee8877;
+    border-radius: 5px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.btn:hover, .btn:focus, .btn:active , .btnchoice:hover, .btnchoice:focus, .btnchoice:active {
+    color: white;
+}
+.btn:hover:before, .btn:focus:before, .btn:active:before , .btnchoice:hover:before, .btnchoice:focus:before, .btnchoice:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+
+/*---------------------------------main---------------------------------*/
+
+/*---------------------------------footer---------------------------------*/
+
+.footer h3{
+    margin:20px 0px;
+    color:#0c594d;
+    font-family: "poppins";
+    font-size: 20px;
+}
+
+.footer{
+    justify-content: center;
+    Padding: 20px ;
+    justify-content: space-around;
+}
+footer{
+    background-color:  #fffded;
+}
+.logo-footer img{
+    width: 7%;
+}
+.logo-footer{
+    text-align: center;
+}
+footer li{
+    margin:15px 0px 0px;
+    font-family: "open";
+    color:#0c594d;
+}
+
+/*---------------------------------footer---------------------------------*/
+
+/*---------------------------------la carte---------------------------------*/
+
+.carte-hr{
+    border:1px solid #0c594d;
+    width: 100%;
+}
+
+.carte{
+    width: 60%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.description{
+    font-size: 14px;
+    display: inline-block;
+    color:#83ad9f;
+
+}
+
+.intitulé{
+    color: #0c594d;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+}
+
+.carte h3{
+    text-align: center;
+    padding: 20px;
+    color:#93bdb2;
+    text-transform: uppercase;
+    font-family: "poppins";
+}
+
+
+.flex2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-carte{
+   flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.flexbtn{
+    justify-content: center;
+    padding: 40px;
+}
+.btnchoice{
+    margin:20px;
+    width:150px;
+    background-color: #0c594d;
+    padding:10px;
+    border:none;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s
+}
+.card{
+    background-color: #fffded ;
+}
+.entree{
+    padding: 20px;
+    width: 50%;
+}
+/*---------------------------------la carte---------------------------------*/
+
+a{
+    text-decoration: none !important;
+    color:white
+}
+
+
+/*---------------------------------page contact ---------------------------------*/
+.contact{
+    padding:40px;
+    height: 400px;
+    width: 100%;
+    background-color: #fffded;
+}
+
+.contact h2 {
+    margin: 6% 0px 30px;
+}
+
+i{
+    margin:0px 10px 0px 0px
+}
+
+.contact li {
+    margin: 15px 0px 0px;
+    color:#0c594d;
+}
+
+/*---------------------------------page contact ---------------------------------*/
+
+
+
+
+/*---------------------------------galerie img---------------------------------*/
+
+.flex-gallerie{
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.flex-gallerie img {
+    margin: 10px;
+    width: 20%;
+}
+
+.gallerie{
+    padding:40px;
+}
+/*---------------------------------galerie img---------------------------------*/
+
+#map {
+    height: 300px;;
+    width: 100%;
+
+}
+
+
+/*
+  /*-------------media queries laptop --------------*/
+@media screen and (max-width:1024px){
+
+    .about-text h2{
+        margin:10% 0px 20px;
+    }
+
+    .contact h2 {
+        margin: 6% 0px 30px;
+    }
+
+
+
+}
+
+/*--------------media queries tablette --------------*/
+@media screen and (max-width:768px){
+    .burger div{
+        display:block;
+        transition: all 0.5s ease;
+    }
+    .links{
+        position:absolute;
+        top:80px;
+        right: 0;
+        height: 40vh;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #fffded;
+        transition: transform 0.5s ease;
+        display: none;
+    }
+
+    .links li{
+        opacity: 0;
+    }
+
+    .nav-active{
+        display: flex;
+    }
+
+    .inspired p{
+        padding:32px 0px;
+        width: 90%;
+    }
+
+
+
+    .about-text h2{
+        font-size:18px;
+        margin:8% 0px 20px;
+    }
+
+
+
+    .card-landing{
+        flex-direction: column;
+    }
+
+    .about-img{
+        width: 100%;
+        max-height: 400px;
+    }
+    .btn{
+        padding: 15px 30px;
+    }
+
+    .about-text{
+        width: 100%;
+        padding: 10px;
+        height: 400px;
+    }
+
+    .about-text p{
+        width: 80%;
+        margin: auto;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .banner{
+        height:300px
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .contact{
+        height: 300px;
+    }
+
+
+
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform:translateY(50px)
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .flex-carte{
+        display: block;
+    }
+
+    .entree{
+        width: 100%;
+    }
+    .carte{
+        width: 70%;
+    }
+
+
+}
+/*--------------media queries smartphone L --------------*/
+@media screen and (max-width:425px){
+
+    .about-text h2{
+        font-size:16px;
+        margin:20px 0px 10px;
+    }
+
+    .about-img{
+
+        max-height: 300px;
+    }
+
+    .about-text p{
+        width: 90%;
+        font-size: 14px;
+    }
+
+
+    .about-text{
+        height: 300px;
+    }
+
+    .btn{
+        padding: 10px 20px;
+        margin:20px 0px ;
+    }
+    .contact{
+        height: 250px;
+    }
+    .contact h2 {
+        margin: 7% 0px 30px;
+    }
+
+
+}
+
+
+/*--------------media queries smartphone M --------------*/
+@media screen and (max-width:375px){
+
+    .about-text h2{
+
+        margin:15px 0px 10px;
+    }
+
+    .contact h2 {
+        margin: 7% 0px 30px;
+    }
+}
+
+/*--------------media queries smartphone s --------------*/
+@media screen and (max-width:320px){
+
+    .about-text h2{
+        margin:5px 0px 10px;
+    }
+
+    .about-img{
+
+        max-height: 280px;
+    }
+
+    .about-text{
+        height: 280px;
+    }
+
+    .contact h2 {
+        margin: 8% 0px 30px;
+    }
+}
+
+/*

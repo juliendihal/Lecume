@@ -1,0 +1,43 @@
+{% extends 'Front/base.html.twig' %}
+{% block content %}
+<div class="banner banner2">
+    <h2>Notre carte </h2>
+</div>
+<div class="card">
+    <div class="flex2 flexbtn">
+        <a href="{{ path('carte' , {id: 1}) }}"><button class="btnchoice" >entrée</button></a>
+        <a href="{{ path('carte' , {id: 2}) }}"><button class="btnchoice" >plats</button></a>
+        <a href="{{ path('carte' , {id: 3}) }}"><button class="btnchoice" >dessert</button></a>
+        <a href="{{ path('carte' , {id: 4} )}}"><button class="btnchoice" >boisson</button></a>
+    </div>
+    <div class="carte">
+        {% for subtype in subtypes %}
+        {% for plat in subtype.plats | slice(0, 1) %}
+            {% if plat.type.name is  same as(type.name) %}
+        <div class="block">
+            <h3>{{ subtype.name }}</h3>
+            <hr class="carte-hr">
+        </div>
+        <div class="flex flex-carte ">
+            {% endif %}{% endfor %}
+            {% for plat in subtype.plats %}
+                {% if plat.type.name is  same as(type.name) %}
+                <div class="entree">
+                    <div class="flex2">
+                        <p class="intitulé">
+                            {{ plat.name }}
+                        </p>
+                        <p>
+                            {{ plat.Prix}} $
+                        </p>
+                    </div>
+                    <p class="description">
+                        {{ plat.description }}
+                    </p>
+                </div>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
